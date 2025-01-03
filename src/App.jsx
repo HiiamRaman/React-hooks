@@ -3,11 +3,21 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+ const [inputname,setInputname] =useState("Raman ")
+ 
+console.log(inputname)
+ function handler(e){
+  setInputname(e.target.value);
 
-  return (
+ }
+  return  (
+    
    <div>
-    <h1>Raman</h1>
+
+
+    <h1>{inputname}</h1>
+
+    <input type ="text"  value= {inputname}  placeholder='Type your name here...' onChange={handler}/>
    </div>
   )
 }
